@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'decoradores';
+  titulo = 'Registro de personas';
+  User:string =""
+  onSuccess(elemento:any){
+    this.User = elemento;
+  }
 }

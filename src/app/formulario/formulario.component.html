@@ -1,0 +1,20 @@
+<form>
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" id="nombre" class="form-control" placeholder="Migel" #nombre>
+  </div>
+  <div class="mb-3">
+    <label for="dni" class="form-label">DNI</label>
+    <input type="text" id="dni" class="form-control" placeholder="12345678" #dni>
+  </div>
+  <div class="mb-3">
+    <label for="estadoCivil" class="form-label">Estado Civil</label>
+    <select id="estadoCivil" class="form-select" #civil>
+      <option>Soltero</option>
+      <option>casado</option>
+      <option>viudo</option>
+      <option>divorciado</option>
+    </select>
+  </div>
+  <button (click)="onEnviar(nombre.value,dni.value,civil.value)" type="submit" [className]="btnColor">Enviar</button>
+</form>
